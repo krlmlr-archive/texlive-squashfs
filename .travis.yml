@@ -1,6 +1,6 @@
 language: c
 
-script: echo | pdflatex
+script: echo "\documentclass{article}\begin{document}\end{document}" | pdflatex
 
 before_install:
   - date
