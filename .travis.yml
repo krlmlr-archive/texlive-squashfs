@@ -7,6 +7,7 @@ before_install:
 
 install:
   - sudo mkdir -p /opt/texlive
+  - sudo modprobe loop
   - sudo mount texlive.squashfs /texlive
   - PATH=/opt/texlive/bin/x86_64-linux:$PATH
 
