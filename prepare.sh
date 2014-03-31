@@ -49,4 +49,4 @@ install-tl-*/install-tl -profile $PROFILE
 SQUASHFS=texlive.squashfs
 
 rm -r $TARGET_DIR/texmf-dist/doc
-mksquashfs $TARGET_DIR $SQUASHFS -all-root
+mksquashfs $TARGET_DIR $SQUASHFS -all-root -comp xz -Xbcj x86
