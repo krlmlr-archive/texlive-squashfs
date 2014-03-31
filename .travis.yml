@@ -6,10 +6,8 @@ before_install:
   - curl -OL https://github.com/krlmlr/texlive-squashfs/raw/master/out/texlive.squashfs
 
 install:
-  - sudo mkdir -p /opt/texlive
-  - sudo modprobe loop
-  - sudo mount texlive.squashfs /texlive
-  - PATH=/opt/texlive/bin/x86_64-linux:$PATH
+  - unsquashfs -d ~/texlive texlive.squashfs
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
 
 notifications:
   email:
