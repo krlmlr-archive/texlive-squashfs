@@ -3,7 +3,9 @@ language: c
 script: echo | pdflatex
 
 before_install:
+  - date
   - curl -L https://github.com/krlmlr/texlive-squashfs/raw/master/out/texlive.tar.xz | tar -JxC ~
+  - date
 
 install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
