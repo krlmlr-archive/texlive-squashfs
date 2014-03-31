@@ -3,12 +3,10 @@ language: c
 script: echo | pdflatex
 
 before_install:
-  - curl -OL https://github.com/krlmlr/texlive-squashfs/raw/master/out/texlive.squashfs
+  - curl -L https://github.com/krlmlr/texlive-squashfs/raw/master/out/texlive.tar.xz | tar -Jxv
 
 install:
-  - sudo mkdir -p /opt/texlive
-  - sudo mount texlive.squashfs /texlive
-  - PATH=/opt/texlive/bin/x86_64-linux:$PATH
+  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
 
 notifications:
   email:
